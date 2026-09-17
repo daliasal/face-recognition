@@ -1,0 +1,12 @@
+clang++ -std=c++17 main.cpp -o main $(pkg-config --cflags --libs opencv5)
+
+
+    //check for a key press and copy the embedding
+    savedEmbedding = embedding.clone(); 
+    faceSaved = true;
+
+    double score = recognizer->match(
+    savedEmbedding,
+    embedding,
+    cv::FaceRecognizerSF::FR_COSINE
+);
